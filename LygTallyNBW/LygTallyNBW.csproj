@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1F897F30-B164-4E8A-8BB1-7A880F918A8B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LygTallyNBW</RootNamespace>
+    <AssemblyName>LygTallyNBW</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode>true</IISExpressUseClassicPipelineMode>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="leo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\leo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\bootstrap\css\bootstrap.css" />
+    <Content Include="assets\bootstrap\css\bootstrap.min.css" />
+    <Content Include="assets\bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="assets\bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="assets\bootstrap\js\bootstrap.js" />
+    <Content Include="assets\bootstrap\js\bootstrap.min.js" />
+    <Content Include="assets\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="assets\css\reset.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\css\supersized.css" />
+    <Content Include="assets\fonts\climacons-webfont.eot" />
+    <Content Include="assets\fonts\climacons-webfont.ttf" />
+    <Content Include="assets\fonts\climacons-webfont.woff" />
+    <Content Include="assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\fonts\FontAwesome.otf" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="assets\ico\flags\Thumbs.db" />
+    <Content Include="assets\ico\Thumbs.db" />
+    <Content Include="assets\img\backgrounds\1.jpg" />
+    <Content Include="assets\img\backgrounds\2.jpg" />
+    <Content Include="assets\img\backgrounds\3.jpg" />
+    <Content Include="assets\img\facebook.png" />
+    <Content Include="assets\img\gallery\Thumbs.db" />
+    <Content Include="assets\img\glyphicons-halflings-white.png" />
+    <Content Include="assets\img\glyphicons-halflings.png" />
+    <Content Include="assets\img\progress.gif" />
+    <Content Include="assets\img\Thumbs.db" />
+    <Content Include="assets\img\twitter.png" />
+    <Content Include="assets\jquery\jquery-1.8.3.min.js" />
+    <Content Include="assets\js\bootstrap-datetimepicker.js" />
+    <Content Include="assets\js\bootstrap-datetimepicker.min.js" />
+    <Content Include="assets\js\bootstrap-datetimepicker.zh-CN.js" />
+    <Content Include="assets\js\jquery-1.8.2.min.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.ar.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.az.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.bg.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.bn.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.ca.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.cs.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.da.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.de.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.ee.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.el.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.es.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.fi.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.fr.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.he.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.hr.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.hu.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.hy.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.id.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.is.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.it.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.ja.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.ka.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.ko.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.lt.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.lv.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.ms.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.nb.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.nl.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.no.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.pl.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.pt-BR.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.pt.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.ro.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.rs-latin.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.rs.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.ru.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.sk.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.sl.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.sv.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.sw.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.th.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.tr.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.ua.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.uk.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.zh-CN.js" />
+    <Content Include="assets\js\locales\bootstrap-datetimepicker.zh-TW.js" />
+    <Content Include="assets\js\scripts.js" />
+    <Content Include="assets\js\supersized-init.js" />
+    <Content Include="assets\js\supersized.3.2.7.min.js" />
+    <Content Include="assets\plugins\datepicker\js\bootstrap-datetimepicker.min.js" />
+    <Content Include="bin\LygTallyNBW.dll.config" />
+    <Content Include="Business\BillListCheck.aspx" />
+    <Content Include="Business\BoatInfo.aspx" />
+    <Content Include="Business\BoatSelect.aspx" />
+    <Content Include="Business\ConCheck.aspx" />
+    <Content Include="Business\ConShipOwnerCount.aspx" />
+    <Content Include="Business\DutyFreeShip.aspx" />
+    <Content Include="Business\ShipInfo.aspx" />
+    <Content Include="Contact\Contact.aspx" />
+    <Content Include="Contact\电话提取.aspx" />
+    <Content Include="default.aspx" />
+    <Content Include="Download\Download.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Jquery\images\ui-icons_222222_256x240.png" />
+    <Content Include="Jquery\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Jquery\images\ui-icons_454545_256x240.png" />
+    <Content Include="Jquery\images\ui-icons_888888_256x240.png" />
+    <Content Include="Jquery\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Jquery\jquery-ui.css" />
+    <Content Include="Jquery\jquery-ui.js" />
+    <Content Include="Jquery\jquery.mobile-1.4.5.min.map" />
+    <Content Include="Files\123.pdf" />
+    <Content Include="Jquery\jquery-1.10.2.js" />
+    <None Include="Properties\PublishProfiles\LygTally.pubxml" />
+    <None Include="Properties\PublishProfiles\LygTallyNBW.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\css\add-ons.min.css" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\climacons-font.css" />
+    <Content Include="assets\css\filetypes.css" />
+    <Content Include="assets\css\font-awesome.min.css" />
+    <Content Include="assets\css\glyphicons.css" />
+    <Content Include="assets\css\halflings.css" />
+    <Content Include="assets\css\jquery.mmenu.css" />
+    <Content Include="assets\css\social.css" />
+    <Content Include="assets\css\style.min.css" />
+    <Content Include="assets\fonts\climacons-webfont.svg" />
+    <Content Include="assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\ico\favicon.ico" />
+    <Content Include="assets\ico\flags\Brazil.png" />
+    <Content Include="assets\ico\flags\Germany.png" />
+    <Content Include="assets\ico\flags\India.png" />
+    <Content Include="assets\ico\flags\Russia.png" />
+    <Content Include="assets\ico\flags\Spain.png" />
+    <Content Include="assets\ico\flags\USA.png" />
+    <Content Include="assets\img\avatar.jpg" />
+    <Content Include="assets\img\avatar1.jpg" />
+    <Content Include="assets\img\avatar2.jpg" />
+    <Content Include="assets\img\avatar3.jpg" />
+    <Content Include="assets\img\avatar4.jpg" />
+    <Content Include="assets\img\avatar5.jpg" />
+    <Content Include="assets\img\avatar6.jpg" />
+    <Content Include="assets\img\avatar7.jpg" />
+    <Content Include="assets\img\browser-chrome-big.png" />
+    <Content Include="assets\img\browser-firefox-big.png" />
+    <Content Include="assets\img\browser-ie.png" />
+    <Content Include="assets\img\browser-opera.png" />
+    <Content Include="assets\img\browser-safari.png" />
+    <Content Include="assets\img\gallery\photo1.jpg" />
+    <Content Include="assets\img\gallery\photo10.jpg" />
+    <Content Include="assets\img\gallery\photo11.jpg" />
+    <Content Include="assets\img\gallery\photo12.jpg" />
+    <Content Include="assets\img\gallery\photo13.jpg" />
+    <Content Include="assets\img\gallery\photo14.jpg" />
+    <Content Include="assets\img\gallery\photo15.jpg" />
+    <Content Include="assets\img\gallery\photo2.jpg" />
+    <Content Include="assets\img\gallery\photo3.jpg" />
+    <Content Include="assets\img\gallery\photo4.jpg" />
+    <Content Include="assets\img\gallery\photo5.jpg" />
+    <Content Include="assets\img\gallery\photo6.jpg" />
+    <Content Include="assets\img\gallery\photo7.jpg" />
+    <Content Include="assets\img\gallery\photo8.jpg" />
+    <Content Include="assets\img\gallery\photo9.jpg" />
+    <Content Include="assets\img\logo1.png" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\core.min.js" />
+    <Content Include="assets\js\jquery-1.11.1.min.js" />
+    <Content Include="assets\js\jquery-2.1.1.min.js" />
+    <Content Include="assets\js\jquery-migrate-1.2.1.min.js" />
+    <Content Include="assets\js\jquery.mmenu.min.js" />
+    <Content Include="assets\js\pages\calendar.js" />
+    <Content Include="assets\js\pages\charts-flot.js" />
+    <Content Include="assets\js\pages\charts-other.js" />
+    <Content Include="assets\js\pages\charts-xcharts.js" />
+    <Content Include="assets\js\pages\form-dropzone.js" />
+    <Content Include="assets\js\pages\form-wizard.js" />
+    <Content Include="assets\js\pages\form-x-editable-demo.js" />
+    <Content Include="assets\js\pages\form-x-editable.js" />
+    <Content Include="assets\js\pages\index.js" />
+    <Content Include="assets\js\SmoothScroll.js" />
+    <Content Include="assets\plugins\autosize\jquery.autosize.min.js" />
+    <Content Include="assets\plugins\chosen\js\chosen.jquery.min.js" />
+    <Content Include="assets\plugins\d3\d3.min.js" />
+    <Content Include="assets\plugins\datatables\js\dataTables.bootstrap.min.js" />
+    <Content Include="assets\plugins\datatables\js\jquery.dataTables.min.js" />
+    <Content Include="assets\plugins\dropzone\css\dropzone.css" />
+    <Content Include="assets\plugins\dropzone\images\spritemap.png" />
+    <Content Include="assets\plugins\dropzone\js\dropzone.min.js" />
+    <Content Include="assets\plugins\easypiechart\js\jquery.easypiechart.min.js" />
+    <Content Include="assets\plugins\editable\css\bootstrap-editable.css" />
+    <Content Include="assets\plugins\editable\inputs-ext\address\address.min.js" />
+    <Content Include="assets\plugins\editable\inputs-ext\typeaheadjs\typeaheadjs.min.js" />
+    <Content Include="assets\plugins\editable\js\bootstrap-editable.min.js" />
+    <Content Include="assets\plugins\flot\jquery.flot.min.js" />
+    <Content Include="assets\plugins\flot\jquery.flot.pie.min.js" />
+    <Content Include="assets\plugins\flot\jquery.flot.resize.min.js" />
+    <Content Include="assets\plugins\flot\jquery.flot.spline.min.js" />
+    <Content Include="assets\plugins\flot\jquery.flot.stack.min.js" />
+    <Content Include="assets\plugins\flot\jquery.flot.time.min.js" />
+    <Content Include="assets\plugins\fullcalendar\css\fullcalendar.css" />
+    <Content Include="assets\plugins\fullcalendar\js\fullcalendar.min.js" />
+    <Content Include="assets\plugins\gauge\gauge.min.js" />
+    <Content Include="assets\plugins\jquery-ui\css\jquery-ui-1.10.4.min.css" />
+    <Content Include="assets\plugins\jquery-ui\js\jquery-ui-1.10.4.min.js" />
+    <Content Include="assets\plugins\justgage\justgage.1.0.1.min.js" />
+    <Content Include="assets\plugins\jvectormap\css\jquery-jvectormap-1.2.2.css" />
+    <Content Include="assets\plugins\jvectormap\js\gdp-data.js" />
+    <Content Include="assets\plugins\jvectormap\js\jquery-jvectormap-1.2.2.min.js" />
+    <Content Include="assets\plugins\jvectormap\js\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="assets\plugins\maskedinput\jquery.maskedinput.min.js" />
+    <Content Include="assets\plugins\mockjax\jquery.mockjax.min.js" />
+    <Content Include="assets\plugins\moment\moment.min.js" />
+    <Content Include="assets\plugins\morris\css\morris.css" />
+    <Content Include="assets\plugins\morris\js\morris.min.js" />
+    <Content Include="assets\plugins\placeholder\jquery.placeholder.min.js" />
+    <Content Include="assets\plugins\raphael\raphael.min.js" />
+    <Content Include="assets\plugins\select2\js\select2.min.js" />
+    <Content Include="assets\plugins\sparkline\jquery.sparkline.min.js" />
+    <Content Include="assets\plugins\touchpunch\jquery.ui.touch-punch.min.js" />
+    <Content Include="assets\plugins\wizard\jquery.bootstrap.wizard.min.js" />
+    <Content Include="assets\plugins\xcharts\css\xcharts.min.css" />
+    <Content Include="assets\plugins\xcharts\js\xcharts.min.js" />
+    <Content Include="bin\leo.dll" />
+    <Content Include="bin\LygTallyNBW.dll" />
+    <Content Include="bin\LygTallyNBW.pdb" />
+    <Content Include="Business\wlship.aspx" />
+    <Content Include="Frame\top.html" />
+    <Content Include="Images\11111%281%29.png" />
+    <Content Include="Images\11111.png" />
+    <Content Include="Images\logo.gif" />
+    <Content Include="Images\QQ图片20160509191926.jpg" />
+    <Content Include="index.aspx" />
+    <Content Include="Frame\left.html" />
+    <Content Include="Jquery\jquery-2.1.4.min.js" />
+    <Content Include="Jquery\jquery-2.2.3.js" />
+    <Content Include="Jquery\jquery.cookie.js" />
+    <Content Include="Jquery\jquery.mobile-1.4.5.css" />
+    <Content Include="Jquery\jquery.mobile-1.4.5.js" />
+    <Content Include="Jquery\jquery.mobile-1.4.5.min.css" />
+    <Content Include="Jquery\jquery.mobile-1.4.5.min.js" />
+    <Content Include="Jquery\jquery.mobile.external-png-1.4.5.css" />
+    <Content Include="Jquery\jquery.mobile.external-png-1.4.5.min.css" />
+    <Content Include="Jquery\jquery.mobile.icons-1.4.5.css" />
+    <Content Include="Jquery\jquery.mobile.icons-1.4.5.min.css" />
+    <Content Include="Jquery\jquery.mobile.inline-png-1.4.5.css" />
+    <Content Include="Jquery\jquery.mobile.inline-png-1.4.5.min.css" />
+    <Content Include="Jquery\jquery.mobile.inline-svg-1.4.5.css" />
+    <Content Include="Jquery\jquery.mobile.inline-svg-1.4.5.min.css" />
+    <Content Include="Jquery\jquery.mobile.structure-1.4.5.css" />
+    <Content Include="Jquery\jquery.mobile.structure-1.4.5.min.css" />
+    <Content Include="Jquery\jquery.mobile.theme-1.4.5.css" />
+    <Content Include="Jquery\jquery.mobile.theme-1.4.5.min.css" />
+    <Content Include="News\Detail.aspx" />
+    <Content Include="News\List.aspx" />
+    <Content Include="test.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\BillListCheck.aspx.cs">
+      <DependentUpon>BillListCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Business\BillListCheck.aspx.designer.cs">
+      <DependentUpon>BillListCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Business\BoatInfo.aspx.cs">
+      <DependentUpon>BoatInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Business\BoatInfo.aspx.designer.cs">
+      <DependentUpon>BoatInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Business\BoatSelect.aspx.cs">
+      <DependentUpon>BoatSelect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Business\BoatSelect.aspx.designer.cs">
+      <DependentUpon>BoatSelect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Business\ConCheck.aspx.cs">
+      <DependentUpon>ConCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Business\ConCheck.aspx.designer.cs">
+      <DependentUpon>ConCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Business\ConShipOwnerCount.aspx.cs">
+      <DependentUpon>ConShipOwnerCount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Business\ConShipOwnerCount.aspx.designer.cs">
+      <DependentUpon>ConShipOwnerCount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Business\DutyFreeShip.aspx.cs">
+      <DependentUpon>DutyFreeShip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Business\DutyFreeShip.aspx.designer.cs">
+      <DependentUpon>DutyFreeShip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Business\ShipInfo.aspx.cs">
+      <DependentUpon>ShipInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Business\ShipInfo.aspx.designer.cs">
+      <DependentUpon>ShipInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Business\wlship.aspx.cs">
+      <DependentUpon>wlship.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Business\wlship.aspx.designer.cs">
+      <DependentUpon>wlship.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact\电话提取.aspx.cs">
+      <DependentUpon>电话提取.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact\电话提取.aspx.designer.cs">
+      <DependentUpon>电话提取.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Download\Download.aspx.cs">
+      <DependentUpon>Download.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Download\Download.aspx.designer.cs">
+      <DependentUpon>Download.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="News\Detail.aspx.cs">
+      <DependentUpon>Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="News\Detail.aspx.designer.cs">
+      <DependentUpon>Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="News\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="News\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>16330</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:16330/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
